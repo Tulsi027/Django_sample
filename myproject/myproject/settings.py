@@ -121,3 +121,20 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Redirect URLs after login/logout
+LOGIN_URL = '/login/'           # redirect if not logged in
+LOGIN_REDIRECT_URL = '/'        # redirect after login
+LOGOUT_REDIRECT_URL = '/login/' # redirect after logout (if using next_page)
+
+
+# Make sure messages framework is enabled (default in Django)
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.DEBUG: 'debug',
+    messages.INFO: 'info',
+    messages.SUCCESS: 'success',
+    messages.WARNING: 'warning',
+    messages.ERROR: 'danger',
+}
+

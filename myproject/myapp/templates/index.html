@@ -7,7 +7,7 @@
     <!-- Flash messages -->
     {% if messages %}
         {% for message in messages %}
-            <div class="mb-3 alert alert-success text-center">
+            <div class="mb-3 alert alert-{{ message.tags }} text-center">
                 {{ message }}
             </div>
         {% endfor %}
@@ -30,10 +30,10 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Student Name</th>
-                <th scope="col">Student Email</th>
-                <th scope="col">Actions</th>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Student Email</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
